@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2018-07-14T01:03:04 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="viewAppointment" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d8508357-b545-4c4b-955c-882d7107ea4a">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="SearchID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT * FROM vehicleservicecentremgtsystem.APPOINTMENT]]>
+	</queryString>
+	<field name="Cust_ID" class="java.lang.String"/>
+	<field name="App_no" class="java.lang.String"/>
+	<field name="Curr_date" class="java.lang.String"/>
+	<field name="Curr_time" class="java.lang.String"/>
+	<field name="App_date" class="java.lang.String"/>
+	<field name="App_time" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="144" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="10" width="240" height="40" forecolor="#3C0EB0" backcolor="#B2EBCC" uuid="b827706d-dd8e-4b90-b8d8-a60028ab9ce1"/>
+				<textElement>
+					<font fontName="Cambria" size="26"/>
+				</textElement>
+				<text><![CDATA[Appointment Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="180" height="125" uuid="bfb32cc5-00e4-4bc0-84f6-3b71d6cb548c"/>
+				<imageExpression><![CDATA["C:/Users/ACER/JaspersoftWorkspace/MyReports/Images/calendar.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="412" splitType="Stretch">
+			<textField>
+				<reportElement x="231" y="10" width="180" height="30" uuid="a2d9f979-303b-4e04-8e8d-0107bd5b55b0"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cust_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="110" width="180" height="30" uuid="8bfaa90d-367d-477b-b625-349c58e9e558"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Curr_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="160" width="180" height="30" uuid="200932f0-7692-4536-8951-884b791a2606"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Curr_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="210" width="180" height="30" uuid="f81003b4-212b-42c0-9472-587eb63fa1f6"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{App_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="231" y="260" width="180" height="30" uuid="e8806eaf-06c5-460a-bc55-ec177b499b11"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{App_time}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="110" width="120" height="30" uuid="adff0ffb-3ee7-42e8-ae68-b6f0c47e1be1"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Requested Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="260" width="120" height="30" uuid="a482d9af-2404-4210-afe3-a7bb4f43dce0"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Appointed Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="10" width="121" height="30" uuid="a6159a73-3ae7-406e-822c-e07b854d511a"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Customer ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="160" width="120" height="30" uuid="58e40686-eca5-4bd6-9e3f-f145ca40fcd5"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Requested Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="60" width="120" height="30" uuid="35cb23ac-d9ce-45bb-8cfd-52d6e5ff49fa"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Appoinment NO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="31" y="210" width="120" height="30" uuid="894ca721-916e-4429-84ba-7dc280f19afc"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Appointed Date]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="231" y="66" width="180" height="30" uuid="ebf96188-ee9b-45b2-b905-2dfcc8b7cbe1"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{App_no}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="55" splitType="Stretch"/>
+	</summary>
+</jasperReport>

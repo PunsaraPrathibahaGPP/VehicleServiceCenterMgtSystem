@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="makeAnappointmentPane" prefHeight="748.0" prefWidth="1085.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.VehicleServiceCentre.controller.MakeAnAppointmentFormController">
+   <children>
+      <Pane prefHeight="58.0" prefWidth="1088.0" style="-fx-background-color: #bdbdbd;">
+         <children>
+            <Label layoutX="414.0" layoutY="11.0" prefHeight="26.0" prefWidth="285.0" text="Make an Appointment ">
+               <font>
+                  <Font name="Cambria Bold Italic" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assests/GVG_Home-Service-Icons_Appointment.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="22.0" layoutY="72.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="158.0" prefWidth="1046.0">
+         <children>
+            <Label layoutX="385.0" layoutY="56.0" prefHeight="30.0" prefWidth="124.0" text="Inquiery Date :" textFill="#141414">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="56.0" prefHeight="30.0" prefWidth="135.0" text="Appointment NO :" textFill="#141414">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="inquieryNowDate" layoutX="515.0" layoutY="56.0" prefHeight="30.0" prefWidth="155.0" promptText="Inquiery Date" showWeekNumbers="true" />
+            <DatePicker fx:id="datepickerAppointedDate" layoutX="877.0" layoutY="56.0" onAction="#datepickerAppointedDateOnAction" prefHeight="30.0" prefWidth="154.0" promptText="Appointed Date" showWeekNumbers="true" />
+            <Label layoutX="385.0" layoutY="121.0" prefHeight="30.0" prefWidth="124.0" text="Inquiery Time :" textFill="#141414">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="inquieryNowTime" layoutX="516.0" layoutY="118.0" prefHeight="30.0" prefWidth="154.0" promptText="Inquiery Time">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="4.0" layoutY="-4.0" prefHeight="36.0" prefWidth="214.0" text="Appointment Detail Panel" textFill="#1b79a4">
+               <font>
+                  <Font name="Cambria Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtAppointmentNo" focusColor="BLACK" layoutX="166.0" layoutY="57.0" prefHeight="28.0" prefWidth="172.0" promptText="Appointment NO">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="731.0" layoutY="121.0" prefHeight="30.0" prefWidth="135.0" text="Appointed Time:" textFill="#141414">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtAppointedTime" layoutX="877.0" layoutY="119.0" onAction="#txtAppointedTimeOnAction" onMouseEntered="#txtAppointedTimeOnMouseEntered" prefHeight="25.0" prefWidth="154.0" promptText="Appointed Time">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="15.0" layoutY="120.0" prefHeight="31.0" prefWidth="135.0" text=" Customer ID       :">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtCustomerId" layoutX="166.0" layoutY="119.0" opacity="0.91" prefHeight="11.0" prefWidth="172.0" promptText="Customer ID">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Separator layoutX="1043.0" orientation="VERTICAL" prefHeight="158.0" prefWidth="8.0" />
+            <Label layoutX="731.0" layoutY="56.0" prefHeight="30.0" prefWidth="135.0" text="Appointed Date :" textFill="#141414">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-3.0" layoutY="-1.0" prefHeight="3.0" prefWidth="1047.0" />
+            <Separator layoutX="-4.0" layoutY="28.0" prefHeight="3.0" prefWidth="1047.0" />
+            <Separator layoutX="-4.0" layoutY="-3.0" orientation="VERTICAL" prefHeight="164.0" prefWidth="8.0" />
+         </children>
+         <opaqueInsets>
+            <Insets top="45.0" />
+         </opaqueInsets>
+      </Pane>
+      <Pane layoutX="19.0" layoutY="242.0" prefHeight="463.0" prefWidth="497.0">
+         <children>
+            <Label layoutX="18.0" layoutY="48.0" prefHeight="31.0" prefWidth="172.0" text="  NIC NO                        :">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtNICNO" labelFloat="true" layoutX="224.0" layoutY="47.0" onAction="#txtNICNOOnAction" opacity="0.7" prefHeight="34.0" prefWidth="253.0" promptText="Please Type NIC No To Search">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtL_Name" labelFloat="true" layoutX="262.0" layoutY="170.0" onAction="#txtL_NameOnAction" onMouseEntered="#txtNameonMouseEntered" opacity="0.91" prefHeight="28.0" prefWidth="214.0" promptText="Last Name">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtF_Name" labelFloat="true" layoutX="21.0" layoutY="170.0" onAction="#txtF_NameOnAction" onMouseEntered="#txtNameonMouseEntered" opacity="0.91" prefHeight="28.0" prefWidth="214.0" promptText="First Name">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="228.0" layoutY="248.0" onAction="#txtAddressOnAction" onMouseEntered="#txtAddressOnMouseEntered" opacity="0.91" prefHeight="28.0" prefWidth="253.0" promptText="Customer Address">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtSalary" labelFloat="true" layoutX="228.0" layoutY="331.0" onAction="#txtSalaryOnAction" onMouseEntered="#txtNICNOOnMouseEntered" opacity="0.91" prefHeight="28.0" prefWidth="253.0" promptText="Customer Salary">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="21.0" layoutY="118.0" prefHeight="34.0" prefWidth="164.0" text="Customer Name        :">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="17.0" layoutY="245.0" prefHeight="34.0" prefWidth="172.0" text="Customer Address    :">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="328.0" prefHeight="34.0" prefWidth="164.0" text="Customer Salary       :">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="406.0" prefHeight="34.0" prefWidth="164.0" text=" Mobile NO                 :">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtMobileNo" labelFloat="true" layoutX="228.0" layoutY="406.0" onAction="#txtMobileNoOnAction" onMouseEntered="#txtMobileNoOnMouseEntered" opacity="0.91" prefHeight="28.0" prefWidth="253.0" promptText="Mobile No">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="9.0" prefHeight="28.0" prefWidth="182.0" text="Customer Detail Panel" textFill="#1b79a4">
+               <font>
+                  <Font name="Cambria Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Separator layoutX="4.0" layoutY="28.0" prefHeight="3.0" prefWidth="488.0" />
+            <Separator layoutY="-1.0" prefHeight="3.0" prefWidth="497.0" />
+            <Separator layoutX="493.0" layoutY="-5.0" onMouseEntered="#txtNICNOOnMouseEntered" orientation="VERTICAL" prefHeight="472.0" prefWidth="8.0" />
+            <Separator layoutY="-1.0" orientation="VERTICAL" prefHeight="465.0" prefWidth="8.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="578.0" layoutY="244.0" prefHeight="370.0" prefWidth="488.0">
+         <children>
+            <JFXTextField fx:id="txtVehicleNo" labelFloat="true" layoutX="206.0" layoutY="68.0" onAction="#txtVehicleNoOnAction" onMouseEntered="#txtVehicleNoOnMouseEntered" opacity="0.7" prefHeight="28.0" prefWidth="265.0" promptText="Please Type Vehicle NO to Search">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtVehicleID" labelFloat="true" layoutX="206.0" layoutY="149.0" opacity="0.91" prefHeight="28.0" prefWidth="265.0" promptText="vehicle ID">
+               <font>
+                  <Font name="Cambria Italic" size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="14.0" layoutY="226.0" prefHeight="26.0" prefWidth="155.0" text="Vehicle Type           :" textFill="#171616">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbvehicleType" layoutX="206.0" layoutY="227.0" prefHeight="25.0" prefWidth="265.0" />
+            <Label layoutX="14.0" layoutY="304.0" prefHeight="16.0" prefWidth="155.0" text="Vehicle Brand         :" textFill="#171616">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cmbVehicleBrand" layoutX="210.0" layoutY="303.0" prefHeight="25.0" prefWidth="265.0" />
+            <Label layoutX="14.0" layoutY="69.0" prefHeight="26.0" prefWidth="155.0" text="Vehicle  NO              :" textFill="#171616">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="150.0" prefHeight="26.0" prefWidth="155.0" text="Vehicle ID                :" textFill="#171616">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label prefHeight="28.0" prefWidth="182.0" text="Vehicle Detail Panel" textFill="#1b79a4">
+               <font>
+                  <Font name="Cambria Bold Italic" size="17.0" />
+               </font>
+            </Label>
+            <Separator layoutX="-8.0" layoutY="-4.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="8.0" />
+            <Separator layoutX="-6.0" layoutY="-3.0" prefHeight="3.0" prefWidth="497.0" />
+            <Separator layoutX="-6.0" layoutY="28.0" prefHeight="3.0" prefWidth="497.0" />
+         </children>
+      </Pane>
+      <Separator layoutX="19.0" layoutY="229.0" prefHeight="3.0" prefWidth="1047.0" />
+      <Separator layoutX="19.0" layoutY="706.0" prefHeight="3.0" prefWidth="497.0" />
+      <Separator layoutX="1065.0" layoutY="241.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="8.0" />
+      <JFXButton fx:id="btnMakePayment" layoutX="841.0" layoutY="643.0" onMouseClicked="#btnMakePaymentClicked" prefHeight="49.0" prefWidth="214.0" ripplerFill="#2daaee" style="-fx-background-color: lightgreen;" text="Make Payment" textFill="#0071ae">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="42.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Cash%20In%20Hand_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btnClearAll" buttonType="RAISED" layoutX="588.0" layoutY="643.0" onAction="#btnClearAllClicked" onMouseClicked="#btnSearchClicked" prefHeight="49.0" prefWidth="227.0" style="-fx-background-color: #fff176 yellow;" text="Clear All Fields" textFill="#2d4490">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Broom_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Separator layoutX="572.0" layoutY="626.0" prefHeight="3.0" prefWidth="497.0" />
+      <Separator layoutX="572.0" layoutY="706.0" prefHeight="3.0" prefWidth="497.0" />
+      <Separator layoutX="1064.0" layoutY="627.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="8.0" />
+      <Separator layoutX="568.0" layoutY="627.0" orientation="VERTICAL" prefHeight="80.0" prefWidth="8.0" />
+      <Separator layoutX="572.0" layoutY="611.0" prefHeight="3.0" prefWidth="497.0" />
+   </children>
+</AnchorPane>

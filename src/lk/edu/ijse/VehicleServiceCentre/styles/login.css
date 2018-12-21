@@ -1,0 +1,7 @@
+#AnchorPane{
+    -fx-background-image: url("lk/edu/ijse/VehicleServiceCentre/Assests/Car-service-2_1.png");
+}
+.labklCollrOn:hover{
+    -fx-background-color: #ccccff;
+
+}

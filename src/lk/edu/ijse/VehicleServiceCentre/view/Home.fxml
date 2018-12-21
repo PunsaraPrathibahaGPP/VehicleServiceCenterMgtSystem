@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="723.0" prefWidth="1085.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.VehicleServiceCentre.controller.HomeController">
+   <children>
+      <Label layoutX="225.0" layoutY="471.0" prefHeight="39.0" prefWidth="270.0" text="Reputation of the Business" textFill="#01a48f">
+         <font>
+            <Font name="Cambria Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="754.0" layoutY="660.0" prefHeight="39.0" prefWidth="256.0" text=" Vehicle Servise Progress" textFill="#01a48f">
+         <font>
+            <Font name="Cambria Italic" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="764.0" layoutY="319.0" prefHeight="39.0" prefWidth="237.0" text="Appointment Progress" textFill="#01a48f">
+         <font>
+            <Font name="Cambria Italic" size="24.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="vehicleServiceChart" layoutX="649.0" layoutY="376.0" prefHeight="275.0" prefWidth="447.0" />
+      <BarChart fx:id="AppointmentProgressBarChart" layoutX="656.0" layoutY="81.0" prefHeight="238.0" prefWidth="422.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Label prefHeight="58.0" prefWidth="1104.0" style="-fx-background-color: #bdbdbd;" />
+      <Label layoutX="8.0" layoutY="24.0" prefHeight="30.0" prefWidth="98.0" text="Date:">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Tear%20Off%20Calendar_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXTextField id="txtDate" fx:id="txtDateloader" focusColor="#0092f5" layoutX="106.0" layoutY="11.0" onAction="#TxtAction" prefHeight="30.0" prefWidth="130.0" unFocusColor="#0582a8">
+         <font>
+            <Font name="Cambria Italic" size="20.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="471.0" layoutY="8.0" prefHeight="43.0" prefWidth="181.0" text="Dashboard" textFill="#0d0d0d">
+         <font>
+            <Font name="Cambria Bold Italic" size="26.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Dashboard_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="845.0" layoutY="24.0" prefHeight="13.0" prefWidth="98.0" text="Time:">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Time_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXTextField fx:id="txtTime" focusColor="#0092f5" layoutX="945.0" layoutY="8.0" onAction="#TimeAction" prefHeight="30.0" prefWidth="130.0">
+         <font>
+            <Font name="DS-Digital Bold" size="24.0" />
+         </font>
+      </JFXTextField>
+      <Pane layoutX="57.0" layoutY="567.0" prefHeight="93.0" prefWidth="582.0" style="-fx-background-color: #e3f2fd;">
+         <children>
+            <Label layoutX="14.0" layoutY="9.0" prefHeight="67.0" prefWidth="486.0" text="TODAY NO OF APPOINTMENTS :" textFill="#1f2525">
+               <font>
+                  <Font name="Candara Bold Italic" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNoOfAppointments" layoutX="500.0" layoutY="9.0" prefHeight="67.0" prefWidth="81.0">
+               <font>
+                  <Font name="Cambria Bold Italic" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <LineChart fx:id="chartReputation" layoutX="21.0" layoutY="71.0" prefHeight="400.0" prefWidth="634.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>

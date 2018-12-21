@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2018-07-13T23:10:08 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="viewAllCustomerDetailReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="88076cd2-3d1e-4663-a70d-45e0cbec2902">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="searchCustomerID" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from vehicleservicecentremgtsystem.customer]]>
+	</queryString>
+	<field name="Cust_ID" class="java.lang.String"/>
+	<field name="F_Name" class="java.lang.String"/>
+	<field name="L_Name" class="java.lang.String"/>
+	<field name="Nic_No" class="java.lang.String"/>
+	<field name="Cust_Address" class="java.lang.String"/>
+	<field name="Cust_Salary" class="java.math.BigDecimal"/>
+	<field name="Cust_Tel" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="94" splitType="Stretch">
+			<staticText>
+				<reportElement x="190" y="20" width="200" height="40" forecolor="#3C0EB0" backcolor="#B2EBCC" uuid="3db1d056-5a3e-449c-addb-c08810e8c248"/>
+				<textElement>
+					<font fontName="Cambria" size="26"/>
+				</textElement>
+				<text><![CDATA[Customer Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="100" height="94" uuid="70066e3c-d043-4348-a9f0-4a565e452abb"/>
+				<imageExpression><![CDATA["C:/Users/ACER/JaspersoftWorkspace/MyReports/Images/images (1).jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="451" splitType="Stretch">
+			<textField>
+				<reportElement x="240" y="20" width="160" height="30" forecolor="#4A4A4A" uuid="99631a22-f635-484c-b2f8-15674293cc40"/>
+				<textElement textAlignment="Left">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cust_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="70" width="160" height="30" forecolor="#4A4A4A" uuid="ba75f071-9217-434a-a2d9-a730619e7a80"/>
+				<textElement textAlignment="Left">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{F_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="127" width="160" height="30" forecolor="#4A4A4A" uuid="726fc0d7-13b9-41f8-95f2-a1f5f7572a8a"/>
+				<textElement textAlignment="Left">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{L_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="170" width="160" height="30" forecolor="#4A4A4A" uuid="6c280e80-d755-4ce7-a3b3-602ee013f896"/>
+				<textElement textAlignment="Left">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nic_No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="238" y="220" width="160" height="30" forecolor="#4A4A4A" uuid="0d848299-d242-4ce1-a513-6e27baec7a32"/>
+				<textElement textAlignment="Left">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cust_Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="270" width="160" height="30" forecolor="#4A4A4A" uuid="e4be174c-2b43-4fbf-a1fe-8336934e30ed"/>
+				<textElement textAlignment="Left">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cust_Salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="323" width="160" height="30" forecolor="#4A4A4A" uuid="0825861e-171f-46ee-9b01-a5a2d5e64bc3"/>
+				<textElement textAlignment="Left">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cust_Tel}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="20" width="150" height="30" forecolor="#030303" uuid="6bfc1a95-f83d-43d9-8694-725b7a79cca6"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cust_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="70" width="150" height="30" forecolor="#030303" uuid="c14d08fc-a9c2-45ee-ade8-d6ae34ef148b"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[F_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="127" width="150" height="30" forecolor="#030303" uuid="c1d8ce24-08d8-4995-b887-315d0696d7ea"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[L_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="-2" y="170" width="150" height="30" forecolor="#030303" uuid="4e8a40ec-407a-47fb-a6a9-8cbd4511a187"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Nic_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="220" width="148" height="30" forecolor="#030303" uuid="8bfe6f5a-6be7-4ebf-a887-7eeeb4b8457e"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cust_Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="270" width="148" height="30" forecolor="#030303" uuid="e3c517bb-5f94-4c1f-a85c-770828e9add5"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cust_Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="323" width="148" height="30" forecolor="#030303" uuid="8e1257d8-4ae9-4d25-978b-b0a020344aaa"/>
+				<textElement textAlignment="Left">
+					<font size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cust_Tel]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

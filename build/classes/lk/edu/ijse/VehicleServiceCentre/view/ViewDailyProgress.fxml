@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="1060.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.VehicleServiceCentre.controller.ViewDailyProgressController">
+   <children>
+      <Label layoutX="322.0" layoutY="22.0" prefHeight="46.0" prefWidth="434.0" text="View Business Progress">
+         <font>
+            <Font name="Cambria Bold Italic" size="36.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="46.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Bullish_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Label layoutX="849.0" layoutY="221.0" prefHeight="34.0" prefWidth="96.0" text="Legend :-" textFill="#4e8bd7">
+         <font>
+            <Font name="System Italic" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="881.0" layoutY="381.0" prefHeight="34.0" prefWidth="129.0" ripplerFill="#00aaff" text="View" textFill="#083382">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <Separator layoutX="835.0" layoutY="218.0" orientation="VERTICAL" prefHeight="198.0" prefWidth="11.0" />
+      <Separator layoutX="840.0" layoutY="414.0" prefHeight="3.0" prefWidth="197.0" />
+      <Separator layoutX="840.0" layoutY="254.0" prefHeight="3.0" prefWidth="197.0" />
+      <Separator layoutX="840.0" layoutY="373.0" prefHeight="3.0" prefWidth="197.0" />
+      <Separator layoutX="1032.0" layoutY="217.0" orientation="VERTICAL" prefHeight="198.0" prefWidth="11.0" />
+      <Separator layoutX="840.0" layoutY="217.0" prefHeight="3.0" prefWidth="197.0" />
+      <BarChart layoutX="92.0" layoutY="90.0" prefHeight="283.0" prefWidth="719.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <StackedBarChart layoutX="94.0" layoutY="382.0" prefHeight="274.0" prefWidth="710.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </StackedBarChart>
+   </children>
+</AnchorPane>

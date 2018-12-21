@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2018-07-15T02:30:13 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="viewServisedDetails" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="687aaffe-4df7-41a9-b1e9-d3438514b25e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="vehicleService.xml"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[Select F_Name,L_Name,Veh_Type,Veh_Brand,S_Description,Time_Duration,S_Fee from service s, serviceDetail sd,vehicle v,appointment a,customer c where s.SID=sd.SID and sd.Veh_ID=v.Veh_ID and a.Cust_ID=c.Cust_ID]]>
+	</queryString>
+	<field name="F_Name" class="java.lang.String"/>
+	<field name="L_Name" class="java.lang.String"/>
+	<field name="Veh_Type" class="java.lang.String"/>
+	<field name="Veh_Brand" class="java.lang.String"/>
+	<field name="S_Description" class="java.lang.String"/>
+	<field name="Time_Duration" class="java.lang.String"/>
+	<field name="S_Fee" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="115" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="10" width="290" height="40" forecolor="#3700DE" uuid="da8598e7-8c72-44b0-9272-8eadfc9c7f0c"/>
+				<textElement>
+					<font fontName="Cambria" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Servised Detail Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="150" height="100" uuid="7b6d12f9-cc76-4c02-8229-5424760ee23f"/>
+				<imageExpression><![CDATA["C:/Users/ACER/JaspersoftWorkspace/MyReports/Images/shutterstock_243440098.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="70" height="30" forecolor="#050505" uuid="06bfe99a-ea2e-467e-8711-ac34142e10c4"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[F_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="0" width="70" height="30" forecolor="#050505" uuid="b19c68f4-ec76-43a1-9136-f2fd5b69913f"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[L_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="0" width="79" height="30" forecolor="#050505" uuid="0f4daed7-137d-4af9-aeec-09b27a763199"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Veh_Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="0" width="90" height="30" forecolor="#050505" uuid="bc723bed-1370-45c0-b1da-396e5dfe695d"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Veh_Brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="100" height="30" forecolor="#050505" uuid="01767cb9-2220-451d-aaa0-02e76a91297f"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[S_Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="66" height="30" forecolor="#050505" uuid="70d08b22-123a-4c85-a73d-fd371598ffc9"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="79" height="30" forecolor="#050505" uuid="00ba67b4-c63d-4db6-ab4f-5bdb1217293d"/>
+				<textElement textAlignment="Left">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[S_Fee]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="-1" y="10" width="71" height="30" forecolor="#5C5B5B" uuid="b0f81202-8796-40f2-92c7-7672dc55796a"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{F_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="10" width="70" height="30" forecolor="#5C5B5B" uuid="619a6990-d01c-4af8-bf12-bc664673d5e6"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{L_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="140" y="10" width="79" height="30" forecolor="#5C5B5B" uuid="1608042f-7f3a-4a54-b66f-f6113ee051a3"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Veh_Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="219" y="10" width="91" height="30" forecolor="#5C5B5B" uuid="5649ebd6-b279-4ca8-b2be-839ae983fef5"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Veh_Brand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="10" width="100" height="30" forecolor="#5C5B5B" uuid="1e0cb2d4-554a-4eb7-8968-0ad32fcee79b"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{S_Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="10" width="65" height="30" forecolor="#5C5B5B" uuid="47034b50-6d48-4926-8f09-c0cca89f79f3"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Time_Duration}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="475" y="10" width="79" height="30" forecolor="#5C5B5B" uuid="477c719c-0406-4de5-b3e2-d8f8a55537e7"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{S_Fee}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2018-07-16T09:49:59 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="viewAllVehicle" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="82efa513-d9f6-4bc6-8dd4-4b5d08492958">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from vehicleservicecentremgtsystem.vehicle]]>
+	</queryString>
+	<field name="Veh_ID" class="java.lang.String"/>
+	<field name="Veh_No" class="java.lang.String"/>
+	<field name="Veh_Type" class="java.lang.String"/>
+	<field name="Veh_Brand" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="121" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="7" width="150" height="100" uuid="4b6cb2e9-4ddc-442d-a3ca-8c440afa7c4c"/>
+				<imageExpression><![CDATA["C:/Users/ACER/JaspersoftWorkspace/MyReports/Images/2015-jaguar-f-type-s-coupe-rear-quarter.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="180" y="14" width="270" height="40" forecolor="#3C0EB0" backcolor="#B2EBCC" uuid="4c50a207-383d-4635-8b73-0e68bddcb16a"/>
+				<textElement>
+					<font fontName="Cambria" size="26"/>
+				</textElement>
+				<text><![CDATA[View All Vehicle Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="8" y="7" width="111" height="30" uuid="3551fcd1-42fe-43a8-9263-2de83dbc0435"/>
+				<textElement>
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Veh_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="119" y="7" width="111" height="30" uuid="1e4d0c61-db9e-48d9-b0ba-4a10314f1964"/>
+				<textElement>
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Veh_No]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="7" width="111" height="30" uuid="fc2132ae-3337-4ad4-990f-2fa536d713cd"/>
+				<textElement>
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Veh_Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="7" width="111" height="30" uuid="56bc2058-59b2-40d1-af5b-217708a74fdd"/>
+				<textElement>
+					<font size="16" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Veh_Brand]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="8" y="7" width="111" height="30" uuid="1ac1aa01-a31a-49a5-8de6-36d6a1b3d3d5"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Veh_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="119" y="7" width="111" height="30" uuid="f43dfd6e-f114-4d42-8527-29f50df223c7"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Veh_No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="7" width="111" height="30" uuid="3ec4f66a-ee31-4df5-8315-34f03ff4a0f0"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Veh_Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="341" y="7" width="111" height="30" uuid="7910e429-6baf-4fa8-b824-c2ed2b501f88"/>
+				<textElement>
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Veh_Brand}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

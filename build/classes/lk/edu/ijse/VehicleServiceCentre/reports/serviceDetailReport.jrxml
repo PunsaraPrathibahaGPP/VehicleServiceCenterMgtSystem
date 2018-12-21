@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2018-07-29T07:10:56 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="serviceDetailReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e29fd5e2-e30c-4d9e-91c4-02dc4f539665">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from vehicleservicecentremgtsystem.service]]>
+	</queryString>
+	<field name="Pay_ID" class="java.lang.String"/>
+	<field name="SID" class="java.lang.String"/>
+	<field name="Time_Duration" class="java.lang.String"/>
+	<field name="S_Fee" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="91" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="20" width="220" height="30" forecolor="#340CE8" uuid="814204fe-63d3-449c-99c8-ca6dd263fe55"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Service Detail Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="80" y="0" width="80" height="80" uuid="b125dbda-7558-4da6-a957-a4c4c602999c"/>
+				<imageExpression><![CDATA["C:/Users/ACER/Desktop/VehicleServiceCentre/src/lk/edu/ijse/VehicleServiceCentre/Assests/rounded-8.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="141" height="30" forecolor="#9266DE" uuid="9736ae82-60cd-42ce-a7e5-99afc59ef8d5"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Pay_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="141" y="0" width="138" height="30" forecolor="#9266DE" uuid="29ba02bf-ec60-4fff-986f-e8927a4e3d17"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[SID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="138" height="30" forecolor="#9266DE" uuid="ba1e6cbf-fcd9-4eb6-9bb1-2b0eae89ffc4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Time_Duration]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="0" width="138" height="30" forecolor="#9266DE" uuid="77df8765-8c83-49c6-b826-181d7ef9eb72"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[S_Fee]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="46" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="14" width="141" height="30" uuid="bcf34e4c-a4e6-46b1-9ced-49c05be7995a"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Pay_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="141" y="14" width="138" height="30" uuid="6bc2a600-8fd3-44f4-acb8-ef3184557c98"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="14" width="138" height="30" uuid="13dd4b2e-f9c8-4c79-9d2c-a5934752b318"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Time_Duration}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="417" y="14" width="138" height="30" uuid="70c75736-e31b-46d3-8e5e-fa0c7435c338"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{S_Fee}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

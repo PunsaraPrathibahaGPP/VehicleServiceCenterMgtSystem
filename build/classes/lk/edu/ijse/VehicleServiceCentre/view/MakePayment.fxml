@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="txtRepairFee" prefHeight="748.0" prefWidth="1085.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.VehicleServiceCentre.controller.MakePaymentController">
+   <children>
+      <JFXButton fx:id="btnMakePayment" layoutX="874.0" layoutY="669.0" onMouseClicked="#btnMakePaymentClicked" prefHeight="45.0" prefWidth="189.0" ripplerFill="#2daaee" style="-fx-background-color: lightgreen;" text="Make Payment" textFill="#0071ae">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="28.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Cash%20In%20Hand_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="500.0" layoutY="678.0" prefHeight="29.0" prefWidth="155.0" text="Total Ammount :-">
+         <font>
+            <Font name="Cambria Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="458.0" layoutY="78.0" prefHeight="11.0" prefWidth="608.0" />
+      <JFXTextField fx:id="txtNicNo" labelFloat="true" layoutX="200.0" layoutY="126.0" onAction="#txtNicNoOnAction" opacity="0.65" prefHeight="34.0" prefWidth="205.0" promptText="Please Type NIC No To Search">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFName" labelFloat="true" layoutX="36.0" layoutY="226.0" onAction="#txtFNameOnAction" opacity="0.65" prefHeight="34.0" prefWidth="168.0" promptText="First Name">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerAddress" labelFloat="true" layoutX="204.0" layoutY="302.0" onAction="#txtCustomerAddressOnAction" opacity="0.65" prefHeight="34.0" prefWidth="205.0" promptText="Customer Address'll Display  Here">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSalary" labelFloat="true" layoutX="204.0" layoutY="385.0" onAction="#txtSalaryOnAction" opacity="0.65" prefHeight="34.0" prefWidth="205.0" promptText="Customer salary Will Display Here">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMobileNo" labelFloat="true" layoutX="200.0" layoutY="461.0" onAction="#txtMobileNoOnAction" opacity="0.65" prefHeight="34.0" prefWidth="205.0" promptText="Mobile No Will Display Here">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSearch" buttonType="RAISED" layoutX="466.0" layoutY="451.0" onMouseClicked="#btnSearchClicked" prefHeight="37.0" prefWidth="189.0" style="-fx-background-color: lightBlue;" text="Search Customer" textFill="#2d4490">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="23.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Search_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="txtLName" labelFloat="true" layoutX="232.0" layoutY="226.0" onAction="#txtLNameOnAction" opacity="0.65" prefHeight="34.0" prefWidth="177.0" promptText="Last Name">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnDeleteAll" buttonType="RAISED" layoutX="857.0" layoutY="451.0" onAction="#btnDeleteAllOnAction" onMouseClicked="#btnDeleteClicked" prefHeight="37.0" prefWidth="189.0" ripplerFill="#e86901" style="-fx-background-color: orange;" text="Delete Payment" textFill="#2d4490">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="24.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Delete_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="36.0" layoutY="128.0" prefHeight="31.0" prefWidth="155.0" text="NIC NO                      :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="183.0" prefHeight="31.0" prefWidth="168.0" text=" Customer Name      :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="304.0" prefHeight="31.0" prefWidth="155.0" text="Customer Address   :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="386.0" prefHeight="31.0" prefWidth="155.0" text="Customer Salary     :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="462.0" prefHeight="31.0" prefWidth="148.0" text="Mobile NO                :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutX="457.0" layoutY="81.0" orientation="VERTICAL" prefHeight="337.0" prefWidth="6.0" />
+      <Separator layoutX="26.0" layoutY="106.0" prefHeight="3.0" prefWidth="396.0" />
+      <Label layoutX="30.0" layoutY="81.0" prefHeight="28.0" prefWidth="155.0" text="Customer Details:" textFill="#1b79a4">
+         <font>
+            <Font name="Cambria Italic" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="785.0" layoutY="133.0" prefHeight="22.0" prefWidth="125.0" text="Payment ID        :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="478.0" layoutY="350.0" prefHeight="25.0" prefWidth="125.0" text="Payment Date  :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="788.0" layoutY="350.0" prefHeight="25.0" prefWidth="138.0" text="Payment Time    :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="784.0" layoutY="198.0" prefHeight="28.0" prefWidth="125.0" text="Service ID           :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="466.0" layoutY="81.0" prefHeight="29.0" prefWidth="155.0" text="Payment Details:" textFill="#1b79a4">
+         <font>
+            <Font name="Cambria Italic" size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="458.0" layoutY="109.0" prefHeight="3.0" prefWidth="608.0" />
+      <JFXTextField fx:id="txtPaymentID" layoutX="925.0" layoutY="123.0" prefHeight="29.0" prefWidth="125.0">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtServiceID" layoutX="924.0" layoutY="197.0" prefHeight="28.0" prefWidth="125.0">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPaymentDate" layoutX="614.0" layoutY="345.0" prefHeight="28.0" prefWidth="125.0">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPaymentTime" layoutX="921.0" layoutY="345.0" prefHeight="28.0" prefWidth="125.0">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="460.0" layoutY="417.0" prefHeight="3.0" prefWidth="608.0" />
+      <TableView fx:id="tblViewAll" layoutX="23.0" layoutY="519.0" onMouseClicked="#onClickTable" prefHeight="141.0" prefWidth="1040.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Cust_ID" />
+          <TableColumn prefWidth="139.0" text="F_Name" />
+            <TableColumn prefWidth="135.0" text="L_Name" />
+            <TableColumn prefWidth="140.0" text="NIC NO" />
+            <TableColumn prefWidth="187.0" text="Address" />
+            <TableColumn prefWidth="165.0" text="Salary" />
+            <TableColumn prefWidth="193.0" text="Mobile NO" />
+        </columns>
+      </TableView>
+      <Label layoutX="474.0" layoutY="132.0" prefHeight="25.0" prefWidth="125.0" text="Customer ID      :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerID" layoutX="618.0" layoutY="124.0" prefHeight="22.0" prefWidth="125.0">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="473.0" layoutY="198.0" prefHeight="29.0" prefWidth="125.0" text="Vehicle ID          :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtVehicleID" layoutX="617.0" layoutY="196.0" prefHeight="28.0" prefWidth="125.0">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutX="1065.0" layoutY="81.0" orientation="VERTICAL" prefHeight="337.0" prefWidth="6.0" />
+      <Separator layoutX="26.0" layoutY="80.0" prefHeight="3.0" prefWidth="396.0" />
+      <Separator layoutX="23.0" layoutY="80.0" orientation="VERTICAL" prefHeight="429.0" prefWidth="6.0" />
+      <Separator layoutX="420.0" layoutY="82.0" orientation="VERTICAL" prefHeight="429.0" prefWidth="6.0" />
+      <Separator layoutX="25.0" layoutY="507.0" prefHeight="3.0" prefWidth="396.0" />
+      <Separator layoutX="458.0" layoutY="432.0" prefHeight="3.0" prefWidth="608.0" />
+      <Separator layoutX="458.0" layoutY="506.0" prefHeight="3.0" prefWidth="608.0" />
+      <Separator layoutX="456.0" layoutY="431.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="6.0" />
+      <Separator layoutX="1063.0" layoutY="432.0" orientation="VERTICAL" prefHeight="75.0" prefWidth="6.0" />
+      <JFXButton fx:id="btnClearAll" buttonType="RAISED" layoutX="681.0" layoutY="450.0" onAction="#btnClearAllOnAction" onMouseClicked="#btnSearchClicked" prefHeight="37.0" prefWidth="139.0" style="-fx-background-color: lightGreen;" text="Clear All" textFill="#2d4490">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assests/Broom_48px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="474.0" layoutY="276.0" prefHeight="25.0" prefWidth="139.0" text="Appointed Date  :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAppointmentDate" layoutX="610.0" layoutY="271.0" prefHeight="28.0" prefWidth="125.0">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Label layoutX="785.0" layoutY="279.0" prefHeight="25.0" prefWidth="139.0" text="Appointed Time  :">
+         <font>
+            <Font name="Cambria Italic" size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAppointmentTime" layoutX="921.0" layoutY="274.0" prefHeight="28.0" prefWidth="125.0">
+         <font>
+            <Font name="Cambria Italic" size="14.0" />
+         </font>
+      </JFXTextField>
+      <Pane prefHeight="56.0" prefWidth="1085.0" style="-fx-background-color: #bdbdbd;">
+         <children>
+            <Label layoutX="26.0" layoutY="13.0" prefHeight="34.0" prefWidth="265.0" text="Make Payment Form">
+               <font>
+                  <Font name="Cambria Bold Italic" size="24.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assests/dollar__.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <JFXButton fx:id="btnRepairDetails" buttonType="RAISED" layoutX="622.0" layoutY="11.0" onMouseClicked="#btnRepairDetailsClicked" prefHeight="22.0" prefWidth="125.0" style="-fx-background-color: yellow;" text=" Repair " textFill="#2d4490">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assests/Support_48px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </JFXButton>
+            <JFXButton fx:id="btnLubricantDetails" buttonType="RAISED" layoutX="765.0" layoutY="11.0" onMouseClicked="#btnLubricantDetailsClicked" prefHeight="37.0" prefWidth="148.0" style="-fx-background-color: yellow;" text="Lubricant " textFill="#2d4490">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="23.0" fitWidth="21.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Assests/oil-1783.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnCleaningDetails" buttonType="RAISED" layoutX="932.0" layoutY="12.0" onMouseClicked="#btnCleaningDetailsClicked" prefHeight="37.0" prefWidth="139.0" style="-fx-background-color: yellow;" text="Cleaning " textFill="#2d4490">
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assests/240_F_103294350_xYOMZKHOy8F1Os8l3pvZVbX1QeQrR0BF.jpg" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="btnRefresh" buttonType="RAISED" layoutX="457.0" layoutY="11.0" onMouseClicked="#btnLoadCustomerView" prefHeight="37.0" prefWidth="148.0" style="-fx-background-color: yellow;" text="Select Customer">
+               <effect>
+                  <DropShadow height="10.62" radius="6.6625" spread="0.08" width="18.03" />
+               </effect>
+               <font>
+                  <Font name="Cambria Italic" size="18.0" />
+               </font></JFXButton>
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtTotalServiceAmmount" layoutX="680.0" layoutY="679.0" onAction="#txtTotalServiceAmmountOnAction" prefHeight="25.0" prefWidth="168.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2018-07-29T07:25:05 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CustomerDetailReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c9077971-41aa-4a6e-acf9-4a0e37eb8fde">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from vehicleservicecentremgtsystem.customer]]>
+	</queryString>
+	<field name="Cust_ID" class="java.lang.String"/>
+	<field name="F_Name" class="java.lang.String"/>
+	<field name="L_Name" class="java.lang.String"/>
+	<field name="Nic_No" class="java.lang.String"/>
+	<field name="Cust_Address" class="java.lang.String"/>
+	<field name="Cust_Salary" class="java.math.BigDecimal"/>
+	<field name="Cust_Tel" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="82" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="22" width="260" height="38" forecolor="#1B09E0" uuid="4d909a3f-eab7-49d6-b295-d008c942227f"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Customer Detail Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="60" y="3" width="70" height="72" uuid="23803571-e7c4-4c15-a8ff-20942b300d16"/>
+				<imageExpression><![CDATA["C:/Users/ACER/Desktop/VehicleServiceCentre/src/lk/edu/ijse/VehicleServiceCentre/Assests/user_add-ee77f7b2fd74c562d23009a510dd659eaf3ba6396ad6700394c4b40551ba7e8d.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="59" splitType="Stretch">
+			<staticText>
+				<reportElement x="318" y="17" width="79" height="30" forecolor="#8187DB" uuid="f19e0a77-067d-447e-8d2a-ac6182cfcd61"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Cust_Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="17" width="79" height="30" forecolor="#8187DB" uuid="8c00b9af-78ca-462e-a0f0-e50eff190bd9"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Cust_Salary]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="17" width="79" height="30" forecolor="#8187DB" uuid="ef260c78-3d72-4e71-af03-55f878c1cf11"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Cust_Tel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="17" width="79" height="30" forecolor="#8187DB" uuid="98f0a39d-fa96-4f66-803a-2c3939901b89"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[L_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="17" width="81" height="30" forecolor="#8187DB" uuid="a02b2cf3-3a17-46de-ac22-f0c9afe87bc4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Cust_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="17" width="79" height="30" forecolor="#8187DB" uuid="9dc52cc5-e9d5-4460-927d-58efe6946fdd"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[F_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="17" width="79" height="30" forecolor="#8187DB" uuid="db893378-1a68-499f-ba8a-ba8d0019147b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Nic_No]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="57" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="81" height="30" uuid="f74505ca-d06e-45ac-a906-c8f0862aced8"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cust_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="10" width="79" height="30" uuid="2ac7e757-1fdf-448b-8f95-0a60e6eece03"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{F_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="10" width="79" height="30" uuid="46633527-742c-41eb-88c1-bd1f33d70f82"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{L_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="10" width="79" height="30" uuid="c84873b4-f80a-4860-a97c-4470829abcde"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nic_No}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="10" width="79" height="30" uuid="c7c8918f-0deb-447f-be57-9887119a5f76"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cust_Address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="10" width="79" height="30" uuid="d0989e16-e038-43f7-bfa8-10b248086802"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cust_Salary}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="10" width="79" height="30" uuid="a33923e7-5a37-45c5-a4eb-a072e831895d"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cust_Tel}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

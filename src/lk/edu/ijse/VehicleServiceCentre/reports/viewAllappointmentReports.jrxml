@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2018-07-14T19:13:13 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="viewAllappointmentReports" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ff048a1d-b204-44df-b88b-747c021c7bf6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * from vehicleservicecentremgtsystem.appointment]]>
+	</queryString>
+	<field name="Cust_ID" class="java.lang.String"/>
+	<field name="App_no" class="java.lang.String"/>
+	<field name="Curr_date" class="java.lang.String"/>
+	<field name="Curr_time" class="java.lang.String"/>
+	<field name="App_date" class="java.lang.String"/>
+	<field name="App_time" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="141" splitType="Stretch">
+			<staticText>
+				<reportElement x="210" y="10" width="240" height="40" forecolor="#3C0EB0" backcolor="#B2EBCC" uuid="1c2080b0-965a-4341-b212-61a283d018a9"/>
+				<textElement>
+					<font fontName="Cambria" size="26"/>
+				</textElement>
+				<text><![CDATA[Appointment Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="10" y="0" width="190" height="130" uuid="8f821aa9-2d3d-49ac-949b-2536e8694eb8"/>
+				<imageExpression><![CDATA["C:/Users/ACER/JaspersoftWorkspace/MyReports/Images/calendar.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="80" height="30" uuid="c76298fd-2b5c-44ed-862a-1c4670e16aaa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Cust_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="0" width="75" height="30" uuid="2d2975e3-7495-46d0-ae79-454375e609f2"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[App_no]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="0" width="92" height="30" uuid="5e351cef-6a15-4703-9247-d0266cf4698e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Inquiry Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="247" y="0" width="103" height="30" uuid="f0cfac79-a849-4d36-a01f-49aa31c96f1b"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Inquiery Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="350" y="0" width="100" height="30" uuid="a8388226-7dd6-440c-bc6a-719e80db4833"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[App_Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="105" height="30" uuid="d454d8c6-974d-4746-811a-8b5f5037fdd5"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[App_Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="7" width="80" height="30" forecolor="#4D4D4D" uuid="c637b2fe-0c1f-4af7-90fe-e86a5fa0d1d7"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Cust_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="80" y="7" width="75" height="30" forecolor="#4D4D4D" uuid="35fb5fb8-a416-4e8a-9ecd-b1f5d7692adb"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{App_no}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="7" width="92" height="30" forecolor="#4D4D4D" uuid="24d29898-2978-4faf-95ff-91648ff0109c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Curr_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="247" y="7" width="103" height="30" forecolor="#4D4D4D" uuid="7aa17a98-0242-4e4c-b85a-b01455ab711e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Curr_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="350" y="7" width="100" height="30" forecolor="#4D4D4D" uuid="65ea7e42-cc9e-4b61-a744-c0d8b499ec8a"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{App_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="7" width="105" height="30" forecolor="#4D4D4D" uuid="3d341458-6e4d-41eb-88c3-0ba045c152aa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Cambria" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{App_time}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

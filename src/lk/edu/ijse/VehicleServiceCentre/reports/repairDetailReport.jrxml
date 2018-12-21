@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2018-07-29T07:07:40 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="repairDetailReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1ffc4e8-4ba3-4cf9-9ebe-cb178786d386">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBConnection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[Select * from vehicleservicecentremgtsystem.Repair]]>
+	</queryString>
+	<field name="R_ID" class="java.lang.String"/>
+	<field name="Techni_ID" class="java.lang.String"/>
+	<field name="Techni_Name" class="java.lang.String"/>
+	<field name="R_Type" class="java.lang.String"/>
+	<field name="R_Fee" class="java.math.BigDecimal"/>
+	<field name="Other_Fees" class="java.math.BigDecimal"/>
+	<field name="Total_Fees" class="java.math.BigDecimal"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="104" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="30" width="238" height="30" forecolor="#2400B3" uuid="453bd570-25bf-42af-bd36-2cddefebb9cb"/>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Vehicle Repair Report]]></text>
+			</staticText>
+			<image>
+				<reportElement x="40" y="0" width="120" height="104" uuid="74cd7a34-2ec8-4a78-b68b-cc7294336ed7"/>
+				<imageExpression><![CDATA["C:/Users/ACER/Desktop/VehicleServiceCentre/src/lk/edu/ijse/VehicleServiceCentre/Assests/Car-service-2.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="38" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="81" height="30" forecolor="#4500DB" uuid="003fa23c-7d4b-47b6-8f76-dda13d402c31"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[R_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="0" width="79" height="30" forecolor="#4500DB" uuid="4f3306bc-e135-420a-80e6-2d99b89a641c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Techni_ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="79" height="30" forecolor="#4500DB" uuid="4f3d0cc0-23b6-4366-805e-aa844977645c"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Techni_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="0" width="79" height="30" forecolor="#4500DB" uuid="56111906-d32c-4f8f-8762-399353f43d62"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[R_Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="318" y="0" width="79" height="30" forecolor="#4500DB" uuid="4b0c55ea-0763-47c9-a4df-27e4b04418e5"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[R_Fee]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="0" width="79" height="30" forecolor="#4500DB" uuid="16a9f469-a33e-457e-9075-4de9761108e8"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Other_Fees]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="476" y="0" width="79" height="30" forecolor="#4500DB" uuid="179553cc-5f0c-4b92-8767-0d584b6c26af"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Total_Fees]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="47" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="81" height="30" uuid="a6030a7f-f57e-40f2-9219-a896ba7235dc"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="81" y="10" width="79" height="30" uuid="b8a09760-3c4c-492a-8948-bab4bdc5dc47"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Techni_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="10" width="79" height="30" uuid="726ccd2d-18b4-4f0e-965a-f01f6c6aed17"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Techni_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="239" y="10" width="79" height="30" uuid="b71da53d-307d-42ac-a135-8933d347de58"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R_Type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="10" width="79" height="30" uuid="9af320c2-e6ea-438b-b423-9738d4d5bcd3"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R_Fee}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="10" width="79" height="30" uuid="ec129ec2-9367-4925-a648-814fb681c337"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Other_Fees}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="476" y="10" width="79" height="30" uuid="f5a39d52-3327-4fac-a573-fe45460c3656"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total_Fees}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

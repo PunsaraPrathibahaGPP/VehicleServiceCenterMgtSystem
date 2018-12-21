@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1381.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.edu.ijse.vehicleServiceCentre.controller.DashBoardViewController">
+   <children>
+      <VBox layoutX="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" opacity="0.65" prefHeight="723.0" prefWidth="257.0" style="-fx-background-color: #000000;">
+         <children>
+            <HBox prefHeight="61.0" prefWidth="327.0" style="-fx-background-color: black;">
+               <children>
+                  <Label prefHeight="35.0" prefWidth="286.0" style="-fx-background-color: #e0e0e0;" text="Admin Panel" textFill="#222728">
+                     <graphic>
+                        <ImageView fitHeight="59.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assests/rounded-4.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Bold Italic" size="26.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="1.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="64.0" prefWidth="356.0">
+               <VBox.margin>
+                  <Insets top="18.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="lblDateTimeDisplay" prefHeight="64.0" prefWidth="249.0" style="-fx-background-color: #e0e0e0;" textFill="#434242">
+                     <font>
+                        <Font name="DS-Digital Bold" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="283.0">
+               <children>
+                  <Label fx:id="lblHome" onMouseClicked="#HomeClicked" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" opacity="0.9" prefHeight="52.0" prefWidth="330.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css" text=" Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Italic" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assests/Dashboard_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="1.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="283.0">
+               <children>
+                  <Label fx:id="lblMakeAnPayment" onMouseClicked="#MakeAnAppoinmentClicked" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" opacity="0.9" prefHeight="52.0" prefWidth="330.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css" text=" Make an Appointment" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assests/Calendar%20Plus_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Italic" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="1.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="283.0">
+               <VBox.margin>
+                  <Insets bottom="1.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="lblMakePayment" onMouseClicked="#lblMakePaymentClicked" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" opacity="0.9" prefHeight="52.0" prefWidth="330.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css" text=" Make Payment" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assests/Cash%20In%20Hand_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Italic" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="283.0">
+               <VBox.margin>
+                  <Insets bottom="1.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="lblInteriorBodyRepair" onMouseClicked="#lblInterirBodyRepairMouseClicked" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" opacity="0.9" prefHeight="52.0" prefWidth="330.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css" text=" Interior Body Repair" textFill="#f8f8f8">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assests/Car%20Service_50px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Italic" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="283.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css">
+               <VBox.margin>
+                  <Insets bottom="1.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="lblCarWashService" onMouseClicked="#lblInterirCarWashServiceMouseClicked" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" opacity="0.9" prefHeight="52.0" prefWidth="330.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css" text=" Car Wash Service" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assests/Automatic%20Car%20Wash_50px_1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Italic" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="283.0">
+               <VBox.margin>
+                  <Insets bottom="1.0" />
+               </VBox.margin>
+               <children>
+                  <Label fx:id="lblLubricantService" onMouseClicked="#lblLubricantServiceClicked" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" opacity="0.9" prefHeight="52.0" prefWidth="264.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css" text=" Lubricent Service" textFill="#ebebeb">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assests/Engine%20Oil%20Level_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Italic" size="22.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="283.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css">
+               <children>
+                  <Label fx:id="lblViewReports" onMouseClicked="#lblViewReportsClicked" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" opacity="0.9" prefHeight="62.0" prefWidth="286.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css" text="View Reports" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="35.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assests/Paper_64px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Italic" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="1.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="53.0" prefWidth="283.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css">
+               <children>
+                  <Label fx:id="lblLogOut" onMouseClicked="#lblLogOutClicked" onMouseEntered="#MouseEntered" onMouseExited="#MouseExited" opacity="0.9" prefHeight="52.0" prefWidth="330.0" styleClass="labklCollrOn" stylesheets="@../styles/newStyle.css" text="  Log Out" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Assests/Logout%20Rounded%20Up_50px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Cambria Italic" size="22.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="1.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets left="4.0" />
+         </padding>
+      </VBox>
+      <AnchorPane fx:id="rootPane" layoutX="273.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="723.0" prefWidth="1146.0" style="-fx-background-color: white;" stylesheets="@../styles/newStyle.css">
+         <padding>
+            <Insets left="5.0" />
+         </padding>
+         <children>
+            <Separator layoutX="-5.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="723.0" prefWidth="8.0">
+               <padding>
+                  <Insets left="1.0" right="1.0" />
+               </padding>
+            </Separator>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
